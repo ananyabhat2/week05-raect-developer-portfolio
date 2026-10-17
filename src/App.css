@@ -1,0 +1,179 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 25px 8%;
+  transition: 0.3s;
+}
+
+.dark {
+  background: #0b1020;
+  color: #f4f4f5;
+}
+
+.light {
+  background: #f4f6fb;
+  color: #182033;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+nav h2 {
+  color: #8b7cff;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #8b7cff;
+}
+
+button, .btn {
+  background: #7865f5;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: #5c49dc;
+  color: #ffffff;
+}
+
+.hero {
+  max-width: 700px;
+  margin: 110px auto;
+  text-align: center;
+}
+
+.welcome {
+  color: #8b7cff;
+  letter-spacing: 4px;
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  font-size: clamp(38px, 7vw, 64px);
+  margin-bottom: 10px;
+  
+}
+/* Name color in dark mode */
+.dark .hero h1 {
+  color: #ffffff;
+}
+
+/* Name color in light mode */
+.light .hero h1 {
+  color: #182033;
+}
+
+.hero h1 {
+  font-size: clamp(38px, 7vw, 64px);
+  margin-bottom: 25px;
+}
+
+.hero h2 {
+  margin-bottom: 20px;
+  color: #8b7cff;
+}
+
+.hero p:not(.welcome) {
+  line-height: 1.8;
+  margin-bottom: 28px;
+}
+
+section:not(.hero) {
+  padding: 55px 0;
+  scroll-margin-top: 25px;
+}
+
+section:not(.hero) > h2 {
+  margin-bottom: 25px;
+  color: #8b7cff;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.card {
+  padding: 22px;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  background: rgba(128, 128, 160, 0.12);
+  border: 1px solid rgba(128, 128, 160, 0.25);
+}
+
+.cards .card {
+  flex: 1 1 150px;
+  text-align: center;
+}
+
+#projects .card {
+  margin-right: 0;
+}
+
+#projects .card p {
+  margin-top: 10px;
+}
+
+#contact p {
+  margin: 12px 0;
+}
+
+footer {
+  text-align: center;
+  padding: 30px 0;
+  border-top: 1px solid rgba(128, 128, 160, 0.25);
+}
+
+@media (max-width: 600px) {
+  .app {
+    padding: 20px 5%;
+  }
+
+  .hero {
+    margin: 75px auto;
+  }
+
+  .nav-links {
+    gap: 12px;
+  }
+}
